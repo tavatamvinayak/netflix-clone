@@ -2,6 +2,7 @@ import Footer from '@/components/Footer'
 import Navbar from '@/components/Navbar'
 import Head from 'next/head'
 import Image from 'next/image'
+import Link from 'next/link'
 
 export default function Home() {
   return (
@@ -14,9 +15,10 @@ export default function Home() {
       </Head>
 
       <Navbar/>
-      <main>
-        <h1>home</h1>
-            
+      <main >
+        <Link href={`/movies`}>
+        <img src="https://assets.nflxext.com/ffe/siteui/vlv3/efb4855d-e702-43e5-9997-bba0154152e0/42f6dd08-d478-46e4-a4a8-e3a93aa7e085/IN-en-20230417-popsignuptwoweeks-perspective_alpha_website_large.jpg" alt="" />
+        </Link>
       </main>
       <Footer/>
     </>

@@ -3,10 +3,8 @@ import MovieCard from '@/components/MovieCard';
 import Navbar from '@/components/Navbar';
 import React from 'react'
 
+
 async function Movies() {
-
-
-
   const url = 'https://netflix54.p.rapidapi.com/search/?query=stranger&offset=0&limit_titles=50&limit_suggestions=20&lang=en';
   const options = {
     method: 'GET',
@@ -26,11 +24,13 @@ async function Movies() {
 
 
   return (
-    <>
+    <>  
+
+
     <Navbar/>
       <div>
-       <h1 className='text-center'>Movies & Series </h1>
-       <p className='text-center'>Streamming Watch now </p>
+       <h1 className='text-center text-white'>Movies & Series </h1>
+       <p className='text-center text-white'>Streamming Watch now </p>
 
         <section className="text-gray-600 body-font">
           <div className="container px-5 py-24 mx-auto">
