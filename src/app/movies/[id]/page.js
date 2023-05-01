@@ -63,50 +63,40 @@ async function netflixID({ params }) {
               <h3 className=" text-xs tracking-widest title-font text-red-600 mb-1"> {main_data.type} </h3>
               <h2 className=" title-font text-5xl font-serif text-white  font-medium hover:text-red-600">{main_data.title} </h2>
               <p className="mt-1 text-white"> {`${main_data.synopsis} ...`} </p>
-              <h3 className='text-orange-500'> { main_data.numSeasonsLabel} </h3>
-              <h3 className='text-yellow-500'>Cast</h3>
-              <details>
-                <summary className='text-white'> {main_data.type} Cast</summary>
-              {
-                main_data.cast.map((e)=> <><li className='text-orange-500'> {e.name} </li></>)
-              }
-              </details>
-              <details>
-                <summary className='text-white'>genres</summary>
-                {
-                  main_data.genres.map((e)=> <><p>{e.name}  </p> </>)
-                }
-              </details>
+              <h3 className='text-orange-500'> {main_data.numSeasonsLabel} </h3>
 
-              <button className='p-2 border-2 text-white border-red-400 my-3 hover:bg-red-500 rounded-2xl hover:text-white'> Watch now</button>
+              <div>
+                <p className='text-lg text-blue-500' > type :  {main_data.type} </p>
+                <summary className='text-yellow-500'><h3 className='text-yellow-500'>Cast</h3> </summary>
+                <p className='text-orange-500'> {
+                  main_data.cast.map((e) => <> {` ${e.name} , `}</>)
+                }</p>
+              </div>
+              <div>
+                <summary className='text-yellow-500'>genres</summary>
+                <p className='text-orange-500'>
+                  {
+                    main_data.genres.map((e) => <> {` ${e.name} , `}   </>)
+                  }
+                </p>
+              </div>
 
+              <Link href={`/movies/watch`}>
+                <button className='p-2 border-2 text-white border-red-400 my-3 hover:bg-red-500 rounded-2xl hover:text-white'>
+                  Watch now
+                </button>
+              </Link>
             </div>
-
           </div>
         </section>
-
-        {/* <section className="text-gray-600 body-font">
-          <div className="container px-5 py-24 mx-auto">
-            <div className="flex flex-wrap -m-4">
-
-              {
-                // <div className="lg:w-1/4 md:w-1/2 p-4 w-full hover:border-red-500 hover:border-2 rounded-3xl my-2">
-                //   <div className="block relative h-48 rounded overflow-hidden">
-                //     <Link href={`/movies/${id}`} ><Image src={} alt={title} width={260} height={200} className="object-cover object-center w-full h-full block" /></Link>
-                //   </div>
-                //   <div className="mt-4">
-                //     <h3 className="text-gray-500 text-xs tracking-widest title-font mb-1"> {type} </h3>
-                //     <h2 className="text-gray-900 title-font text-lg font-medium">{title.substring(0, 30)} </h2>
-                //     <p className="mt-1"> {`${synopsis.substring(0, 70)} ...`} </p>
-                //     <button className="rounded hover:text-white hover:bg-red-600 border-2 p-2 my-2 border-red-400 "><Link href={`/movies/${id}`} >watch now</Link></button>
-                //   </div>
-                // </div>
-              }
-
+        <section className='Episodes pb-28'>
+          <Link href={`/movies/episodes/${id}`}>
+            <div className='flex flex-col items-center'>
+              <p>Click here</p>
+              <button className='text-orange-500 text-center text-2xl'>  SEONSON EPISODES ALL </button>
             </div>
-          </div>
-        </section> */}
-
+          </Link>
+        </section>
       </div>
       <Footer />
     </>
