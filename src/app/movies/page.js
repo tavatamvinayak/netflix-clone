@@ -1,7 +1,9 @@
-import Footer from '@/components/Footer';
+
 import MovieCard from '@/components/MovieCard';
-import Navbar from '@/components/Navbar';
+
 import React from 'react'
+
+
 
 
 async function Movies() {
@@ -29,7 +31,6 @@ async function Movies() {
     <>
 
 
-      <Navbar />
       <div>
         <h1 className='text-center text-white'>Movies & Series </h1>
         <p className='text-center text-white'>Streamming Watch now </p>
@@ -38,11 +39,12 @@ async function Movies() {
           <div className="container px-5 py-24 mx-auto">
             <div className="flex flex-wrap -m-4">
 
-              {
-                main_data.map((curElem) => {
-                  return <MovieCard key={curElem.id} {...curElem} />
-                })
-              }
+                {
+                  main_data.map((curElem) => {
+                    return <MovieCard key={curElem.id} {...curElem} />
+                  })
+                }
+             
 
             </div>
           </div>
@@ -50,7 +52,7 @@ async function Movies() {
 
 
       </div>
-      <Footer />
+      
     </>
   )
 }

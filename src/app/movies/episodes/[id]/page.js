@@ -1,5 +1,4 @@
-import Footer from '@/components/Footer';
-import Navbar from '@/components/Navbar';
+
 import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react'
@@ -32,7 +31,7 @@ async function seasonEpisodes({ params }) {
 
   return (
     <div className='text-white'>
-      <Navbar />
+   
       <h1 className='text-5xl text-white text-center'>  episodes </h1>
       <Link href={`/movies/${id}`}>Back to Series</Link>
 
@@ -67,7 +66,7 @@ async function seasonEpisodes({ params }) {
       </section>
 
 
-      <Footer />
+ 
     </div>
   )
 }

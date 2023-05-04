@@ -1,8 +1,7 @@
 import React from 'react'
 
 
-import Navbar from '@/components/Navbar';
-import Footer from '@/components/Footer';
+
 import Image from 'next/image';
 import Link from 'next/link';
 async function netflixID({ params }) {
@@ -51,7 +50,7 @@ async function netflixID({ params }) {
 
   return (
     <>
-      <Navbar />
+
       <div>
         <section className="text-gray-600 body-font">
           <div className="container mx-auto flex px-5 py-24 md:flex-row flex-col items-center">
@@ -98,7 +97,7 @@ async function netflixID({ params }) {
           </Link>
         </section>
       </div>
-      <Footer />
+      
     </>
   )
 }
